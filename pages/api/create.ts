@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import { students } from "./db";
 
-interface Student {
+export interface Student {
     id: string,
     nombre: string,
     curso: string,
@@ -16,7 +16,7 @@ const handler = async (req : NextApiRequest,res : NextApiResponse) => {
 
     if(req.method == "POST"){
 
-        const { nombre, curso, primerCuatri, segundoCuatri, email } = req.body;
+        const { nombre, curso, primerCuatri, segundoCuatri } = req.body;
 
         const newStudent: Student = {
             id: (students.length + 1).toString(),
