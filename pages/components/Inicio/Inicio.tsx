@@ -6,7 +6,7 @@ const Inicio = () => {
     const [students,setStudents] = useState<Student[]>()
 
     const fetchInfo =  async()=>{
-        const response = await fetch("https://c18-delta.vercel.app/api/students");
+        const response = await fetch("http://localhost:3000//api/students");
         const data = await response.json();
         setStudents(data)
     };
