@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
-import { TextField, Typography, Box, Button } from '@mui/material';
-import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { Student } from '../../api/create';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 
 // const loginSchema = yup
 //   .object({
@@ -29,7 +25,7 @@ import { Student } from '../../api/create';
 //   .required();
 
 
-export const CreatStudent: React.FC = () => {
+const CreatStudent: React.FC = () => {
     const { register, handleSubmit, formState: {errors}, getValues } = useForm();
 
   const onSubmit = async () => {
@@ -87,3 +83,5 @@ export const CreatStudent: React.FC = () => {
     </form>
     )
 };
+
+export default CreatStudent;

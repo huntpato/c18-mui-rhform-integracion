@@ -1,5 +1,6 @@
 import React from 'react'
-import { CreatStudent } from './components/Create/CreateStudent'
+import CreatStudent from './components/Create/CreateStudent'
+
 
 const create = () => {
   return (
